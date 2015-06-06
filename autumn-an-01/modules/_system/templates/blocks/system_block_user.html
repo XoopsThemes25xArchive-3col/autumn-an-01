@@ -1,0 +1,30 @@
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td id="usermenu" style="text-align:right; ">
+      <{if $xoops_isadmin}>
+	  	<div style="height:3px;">&nbsp;</div>
+		<div style="padding-left:0px; width:x;">
+        <a class="menuTop" href="<{$xoops_url}>/admin.php"  title="<{$block.lang_adminmenu}>"><{$block.lang_adminmenu}></a>
+		</div>
+		<div style="height:5px;">&nbsp;</div>
+	    <a href="<{$xoops_url}>/user.php" title="<{$block.lang_youraccount}>"><{$block.lang_youraccount}></a><br />
+		<div style="height:5px;">&nbsp;</div>
+      <{else}>
+		<a class="menuTop" href="<{$xoops_url}>/user.php" title="<{$block.lang_youraccount}>"><{$block.lang_youraccount}></a>
+		<div style="height:5px;">&nbsp;</div>
+      <{/if}>
+      <a href="<{$xoops_url}>/edituser.php" title="<{$block.lang_editaccount}>"><{$block.lang_editaccount}></a>
+	  <div style="height:5px;">&nbsp;</div>
+      <a href="<{$xoops_url}>/notifications.php" title="<{$block.lang_notifications}>"><{$block.lang_notifications}></a>
+	  <div style="height:5px;">&nbsp;</div>
+      <{if $block.new_messages > 0}>
+        <a class="highlight" href="<{$xoops_url}>/viewpmsg.php" title="<{$block.lang_inbox}>"><{$block.lang_inbox}> (<span style="color:#ff0000; font-weight: bold;"><{$block.new_messages}></span>)</a>
+		<div style="height:5px;">&nbsp;</div>
+      <{else}>
+        <a href="<{$xoops_url}>/viewpmsg.php" title="<{$block.lang_inbox}>"><{$block.lang_inbox}></a><br />
+		<div style="height:5px;">&nbsp;</div>
+      <{/if}>
+      <a href="<{$xoops_url}>/user.php?op=logout" title="<{$block.lang_logout}>"><{$block.lang_logout}></a>
+    </td>
+  </tr>
+</table>
